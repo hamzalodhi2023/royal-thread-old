@@ -214,7 +214,7 @@ nav ul li a:hover::after {
 /*? new-arrivals section start */
 #new-arrivals {
   /* border: 1px solid #f00; */
-  height: 100vh;
+  height: 175vh;
   width: 100%;
 }
 
@@ -260,22 +260,40 @@ nav ul li a:hover::after {
 
 .arrivals-card-div {
   /* border: 1px solid #000; */
-  width: 300px;
+  width: 230px;
   height: 431px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin: 30px 50px 30px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrivals-card-div::after {
+  content: "Sale";
+  width: 200px;
+  height: 35px;
+  background-color: var(--primary);
+  position: absolute;
+  transform: rotate(45deg);
+  top: 10px;
+  right: -70px;
+  font-size: 20px;
+  box-shadow: 0.5px 0.5px 2px rgb(143, 143, 143);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrivals-card-div .image-div {
   /* border: 1px solid #000; */
   height: 80%;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .arrivals-card-div .image-div img {
   height: 100%;
   width: 100%;
-  /* object-position: center; */
   object-fit: contain;
 }
 
@@ -316,5 +334,27 @@ nav ul li a:hover::after {
 .text-div span p {
   color: var(--primary);
 }
-
 /*` new-arrivals section end */
+/*? Collection section start */
+#Collection {
+  /* border: 1px solid #000; */
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-right-div {
+  border: 1px solid #000;
+  width: 50%;
+  height: 100%;
+}
+
+.collection-left-div {
+  border: 1px solid #f00;
+  width: 50%;
+  height: 100%;
+}
+/*` Collection section end */
