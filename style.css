@@ -210,3 +210,39 @@ nav ul li a:hover::after {
   color: var(--heading);
 }
 /*` header section end */
+/*? new-arivals section start */
+#new-arrivals {
+  border: 1px solid #000;
+  height: 100vh;
+  width: 100%;
+}
+
+#new-arrivals h1 {
+  /* border: 1px solid #000; */
+  font-size: 60px;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 30px;
+  position: relative;
+}
+
+#new-arrivals h1::after {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 74px;
+  left: 394px;
+}
+
+#new-arrivals h1::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 74px;
+  right: 394px;
+}
+/*` new-arivals section end */
