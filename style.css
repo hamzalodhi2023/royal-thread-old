@@ -107,11 +107,16 @@ nav ul li a:hover::after {
   height: 180px;
   width: 180px;
   overflow: hidden;
+  transition: 0.6s;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.card-main-div .card-div:hover {
+  transform: scale(1.05);
 }
 
 .card-main-div .card-div img {
