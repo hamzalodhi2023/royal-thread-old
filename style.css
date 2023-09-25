@@ -336,6 +336,7 @@ nav ul li a:hover::after {
 }
 /*` new-arrivals section end */
 /*? Collection section start */
+
 #Collection {
   /* border: 1px solid #000; */
   height: 100vh;
@@ -346,15 +347,106 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 
+.collection-left-div {
+  /* border: 1px solid #f00; */
+  width: 50%;
+  height: 100%;
+}
+
+.collection-left-div .image1 {
+  background-image: url(images/watch.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000;
+  height: 50%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.collection-left-div .image1::after {
+  content: "Watches Collection";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+  font-size: 70px;
+  font-weight: 300;
+  opacity: 0%;
+  transition: 0.9s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-left-div .image1:hover:after {
+  opacity: 100%;
+}
+
+.collection-left-div .image2 {
+  background-image: url(images/bag.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000;
+  height: 50%;
+  width: 100%;
+}
+
+.collection-left-div .image2::after {
+  content: "Bags & Accessories";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+  font-size: 70px;
+  font-weight: 300;
+  opacity: 0%;
+  transition: 0.9s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-left-div .image2:hover::after {
+  opacity: 100%;
+}
+
 .collection-right-div {
   border: 1px solid #000;
   width: 50%;
   height: 100%;
 }
-
-.collection-left-div {
-  border: 1px solid #f00;
-  width: 50%;
+.sub-collection {
+  background-image: url(images/beauty.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.sub-collection::after {
+  content: "Beauty & Fragrances";
+  width: 100%;
+  height: 100%;
+  font-size: 70px;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0%;
+  transition: 0.9s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-collection:hover:after {
+  opacity: 100%;
 }
 /*` Collection section end */
