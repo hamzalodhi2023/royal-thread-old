@@ -24,7 +24,7 @@ a {
 /*? header section start */
 #header {
   /* border: 1px solid #000; */
-  height: 120vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -95,10 +95,10 @@ nav ul li a:hover::after {
 .card-main-div {
   /* border: 1px solid #000; */
   width: 100%;
-  height: 250px;
+  height: 200px;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -138,13 +138,13 @@ nav ul li a:hover::after {
 
 .offer-card-main-div {
   /* border: 1px solid #000; */
-  height: 250px;
+  height: 200px;
   width: 100%;
-  padding-top: 50px;
 
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .offer-card-div {
@@ -210,9 +210,10 @@ nav ul li a:hover::after {
   color: var(--heading);
 }
 /*` header section end */
-/*? new-arivals section start */
+
+/*? new-arrivals section start */
 #new-arrivals {
-  border: 1px solid #000;
+  /* border: 1px solid #f00; */
   height: 100vh;
   width: 100%;
 }
@@ -245,4 +246,75 @@ nav ul li a:hover::after {
   top: 74px;
   right: 394px;
 }
-/*` new-arivals section end */
+
+#new-arrivals .arrivals-card-main-div {
+  /* border: 1px solid #000; */
+  height: auto;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.arrivals-card-div {
+  /* border: 1px solid #000; */
+  width: 300px;
+  height: 431px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.arrivals-card-div .image-div {
+  /* border: 1px solid #000; */
+  height: 80%;
+  position: relative;
+}
+
+.arrivals-card-div .image-div img {
+  height: 100%;
+  width: 100%;
+  /* object-position: center; */
+  object-fit: contain;
+}
+
+.arrivals-card-div .text-div {
+  /* border: 1px solid #000; */
+  height: 20%;
+  width: 100%;
+  padding-left: 20px;
+  color: var(--heading);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-div h3 {
+  /* border: 1px solid #000; */
+  font-weight: 300;
+  color: var(--heading);
+}
+
+.text-div h4 {
+  /* border: 1px solid #000; */
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--heading);
+}
+
+.text-div span {
+  /* border: 1px solid #000; */
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-div span p {
+  color: var(--primary);
+}
+
+/*` new-arrivals section end */
