@@ -456,7 +456,7 @@ nav ul li a:hover::after {
   background-image: url(images/subscribe\ background.png);
   background-position: center;
   background-size: cover;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: 70vh;
   width: 100%;
 
