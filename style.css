@@ -451,6 +451,105 @@ nav ul li a:hover::after {
 }
 /*` Collection section end */
 /*? subscription section start */
+
 #subscription {
+  background-image: url(images/subscribe\ background.png);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000;
+  height: 70vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#subscription h1 {
+  /* border: 1px solid #000; */
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+
+.form-box {
+  /* border: 1px solid #000; */
+  border-radius: 20px;
+  position: relative;
+  width: 400px;
+  height: 350px;
+  background-color: rgb(131, 18, 109);
+  background-image: linear-gradient(0deg, rgb(211, 46, 100), rgb(131, 18, 109));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+.form-box h2 {
+  font-size: 2em;
+  color: var(--heading);
+  text-align: center;
+} */
+
+.inputbox {
+  position: relative;
+  margin: 30px 0px;
+  width: 310px;
+  border-bottom: 2px solid white;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: white;
+}
+
+.inputbox i {
+  position: absolute;
+  right: 8px;
+  color: white;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+form div button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 0.6s;
+}
+
+form div button:hover {
+  background-color: var(--primary);
+  color: white;
 }
 /*` subscription section end */
