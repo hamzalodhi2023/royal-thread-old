@@ -568,8 +568,7 @@ form div button:hover {
 
 #footer .lgo-description img {
   /* border: 1px solid #000; */
-  width: 130px;
-  margin-left: 30%;
+  width: 50px;
 }
 
 #footer .lgo-description p {
@@ -577,6 +576,7 @@ form div button:hover {
   text-align: justify;
   text-indent: 50px;
   font-size: 14px;
+  font-weight: 200;
 }
 
 .footer-right-div {
@@ -592,7 +592,7 @@ form div button:hover {
 .footer-right-div ul {
   /* border: 1px solid #000; */
   width: 300px;
-  height: 200px;
+  height: 150px;
   list-style: none;
 
   display: flex;
@@ -603,13 +603,14 @@ form div button:hover {
 
 .footer-right-div ul h3 {
   color: var(--heading);
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .footer-right-div ul a {
   /* border: 1px solid #000; */
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 200;
   color: var(--heading);
   transition: 0.6s;
   position: relative;
