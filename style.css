@@ -357,7 +357,7 @@ nav ul li a:hover::after {
   background-image: url(images/watch.jpg);
   background-position: center;
   background-size: cover;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: 50%;
   width: 100%;
   position: relative;
@@ -385,10 +385,10 @@ nav ul li a:hover::after {
 }
 
 .collection-left-div .image2 {
+  /* border: 1px solid #000; */
   background-image: url(images/bag.jpg);
   background-position: center;
   background-size: cover;
-  border: 1px solid #000;
   height: 50%;
   width: 100%;
 }
@@ -414,7 +414,7 @@ nav ul li a:hover::after {
 }
 
 .collection-right-div {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 50%;
   height: 100%;
 }
@@ -450,3 +450,7 @@ nav ul li a:hover::after {
   opacity: 100%;
 }
 /*` Collection section end */
+/*? subscription section start */
+#subscription {
+}
+/*` subscription section end */
