@@ -486,13 +486,6 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 
-/* 
-.form-box h2 {
-  font-size: 2em;
-  color: var(--heading);
-  text-align: center;
-} */
-
 .inputbox {
   position: relative;
   margin: 30px 0px;
@@ -553,3 +546,142 @@ form div button:hover {
   color: white;
 }
 /*` subscription section end */
+/*? footer section start */
+
+#footer {
+  /* border: 1px solid #000; */
+  /* background-color: var(--background); */
+  height: 55vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .lgo-description {
+  /* border: 1px solid #000; */
+  height: 100%;
+  width: 30%;
+  padding: 5px 20px;
+}
+
+#footer .lgo-description img {
+  /* border: 1px solid #000; */
+  width: 130px;
+  margin-left: 30%;
+}
+
+#footer .lgo-description p {
+  color: var(--heading);
+  text-align: justify;
+  text-indent: 50px;
+  font-size: 14px;
+}
+
+.footer-right-div {
+  /* border: 1px solid #000; */
+  width: 70%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-right-div ul {
+  /* border: 1px solid #000; */
+  width: 300px;
+  height: 200px;
+  list-style: none;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.footer-right-div ul h3 {
+  color: var(--heading);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.footer-right-div ul a {
+  /* border: 1px solid #000; */
+  font-size: 20px;
+  color: var(--heading);
+  transition: 0.6s;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-right-div ul a:hover::after {
+  content: "";
+  background-color: var(--primary);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-right-div ul a:hover {
+  color: var(--primary);
+}
+
+/*` footer section end */
+/*? copy right section start */
+
+#copy {
+  /* border: 1px solid #000; */
+  height: 20vh;
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#copy hr {
+  width: 80%;
+  height: 1px;
+}
+
+#copy p {
+  margin-top: 20px;
+  color: var(--heading);
+  font-weight: 200;
+}
+
+.social {
+  /* border: 1px solid #000; */
+  width: 20%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social i {
+  /* border: 1px solid #000; */
+  background-color: #e0e0e0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #999999;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social i:hover {
+  background-color: var(--primary);
+  color: white;
+}
+/*` copy right section end */
