@@ -577,7 +577,7 @@ form div button:hover {
 
 #footer .lgo-description p {
   color: var(--heading);
-  text-align: justify;
+  text-align: left;
   font-size: 14px;
   font-weight: 200;
   padding-left: 10px;
