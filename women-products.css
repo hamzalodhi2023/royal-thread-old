@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  user-select: none;
+}
+
+:root {
+  --heading: #33373e;
+  --primary: #f11a7b;
+  --background: #fff0f5;
+}
