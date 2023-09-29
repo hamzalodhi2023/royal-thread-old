@@ -375,3 +375,175 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 /*` section product-description end */
+
+/*? order section start */
+#order {
+  /* border: 1px solid #000; */
+  height: 100vh;
+  width: 100%;
+}
+
+.order-heading {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 16%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-heading-left-div {
+  /* border: 1px solid #000; */
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.order-heading-left-div img {
+  /* border: 1px solid #000; */
+  width: 60px;
+  margin-left: 30px;
+}
+
+.order-heading-left-div h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.order-heading-right-div {
+  /* border: 1px solid #000; */
+  height: 100%;
+  width: 65%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.order-heading-right-div h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.form-main-div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 84%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-left-div {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form-left-div h4 {
+  /* border: 1px solid #000; */
+  margin: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--heading);
+}
+
+.form-left-div .form {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 80%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+  color: var(--heading);
+}
+
+.form-right-div {
+  /* border: 1px solid #000; */
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form-right-div h4 {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--heading);
+}
+
+.form-right-div input[type="text"],
+.form-right-div input[type="email"],
+.form-right-div input[type="tel"],
+.form-right-div input[type="number"] {
+  width: 100%;
+  height: 25px;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 12px;
+  padding-left: 40px;
+  border: none;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  outline: none;
+  margin: -10px 0px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  resize: none;
+  color: var(--heading);
+}
+
+.form-right-div label {
+  /* border: 1px solid #000; */
+  font-size: 15px;
+}
+
+.form-right-div button {
+  background-color: #eb3a8a;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 57%;
+  transition: 0.6s;
+}
+
+.form-right-div button:hover {
+  background-color: var(--primary);
+
+  color: white;
+}
+
+.form-right-div .form {
+  /* border: 1px solid #000; */
+  width: 70%;
+  height: 90%;
+}
+/*` order section end */
