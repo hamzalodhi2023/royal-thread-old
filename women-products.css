@@ -374,6 +374,51 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: center;
 }
+
+.right-div .button-div {
+  /* border: 1px solid #000; */
+  width: 350px;
+  height: 100px;
+  margin-top: 20px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.right-div .button-div button {
+  /* border: 1px solid #000; */
+  width: 160px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: 0.6s;
+}
+
+.cancel-button:hover {
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.order-button {
+  border: 1px solid var(--primary);
+  background-color: #eb3a8a;
+  color: white;
+  transition: 0.6s;
+}
+
+.order-button:hover {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
 /*` section product-description end */
 
 /*? order section start */
