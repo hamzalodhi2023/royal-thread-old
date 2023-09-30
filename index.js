@@ -197,7 +197,7 @@ confirmOrderBtn.addEventListener('click', function(e){
         Host : "smtp.elasticemail.com",
         Username : "hafsalodhi2023@gmail.com",
         Password : "BCCA4002AE7D73B6C5D7F346A6C87B6CA404",
-        To : 'lodhiumar2023@gmail.com',
+        To : customerEmail.value,
         From : "hafsalodhi2023@gmail.com",
         Subject : 'ORDER RECEIPT',
         Body : emailBody
