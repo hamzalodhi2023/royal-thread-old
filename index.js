@@ -1,5 +1,6 @@
 // Targeting All The Elements Started
 let shippingFee = 200;
+const form = document.querySelector("#form");
 const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
 const nav = document.querySelector("nav");
@@ -102,12 +103,19 @@ const productCurrentPriceInput = document.getElementById("current-price");
 const productQuantityInput = document.getElementById("product-quantity");
 const productSubTotalInput = document.getElementById("product-sub-total");
 const productGrandTotalInput = document.getElementById("product-grand-total");
+const customerName = document.getElementById("customer-name");
+const customerEmail = document.getElementById("customer-email");
+const customerWhatsapp = document.getElementById("customer-whatsapp");
+const customerAddress = document.getElementById("customer-address");
+const confirmOrderBtn = document.getElementsByClassName("confirm-order-btn")[0];
 
 // targeting order form elements
 
 
 orderButton.addEventListener('click', function(){
     
+    // form data logic started
+
     productNameInput.value = productDetailsProductName.textContent;
     productCodeInput.value = productDetailsProductCode.textContent;
     productSizeInput.value = productDetailsSize.value;
@@ -134,7 +142,73 @@ orderButton.addEventListener('click', function(){
     orderSection.style.display = "block";
     ProductDetailsDiv.style.display = 'none';
     orderSection.classList.toggle("fade-in");
+    // form data logic ended
+    
+})
 
+
+confirmOrderBtn.addEventListener('click', function(e){
+    
+    // posting form data to whatsapp logic started
+   
+    let url = "https://wa.me/923350020256?text=" +
+   "*ROYAL THREAD*" + '%0a'+ "%0a" + 
+   "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
+   "*Name:* " + customerName.value + "%0a" +
+   "*Email:* " + customerEmail.value + "%0a" +
+   "*WhatsApp:* " + customerWhatsapp.value + "%0a" +
+   "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
+   "*ORDER DETAILS*" + "%0a" + "%0a" +
+   "*Product:* " + productNameInput.value + "%0a" + 
+   "*P.Code:* " + productCodeInput.value +  "%0a" +
+   "*Size:* " + productSizeInput.value +  "%0a" +
+   "*Color:* " + productColorInput.value +  "%0a" +
+   "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
+   "*Current Price:* PKR. " + productCurrentPriceInput.value +  "%0a" +
+   "*Quantity:* " + productQuantityInput.value +  "%0a" +
+   "*Sub Total:* PKR. " + productSubTotalInput.value +  "%0a" +
+   "*Grand Total:* PKR. " + productGrandTotalInput.value+ "%0a" + "%0a" +
+   "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
+   
+   window.open(url);
+   
+   // posting form data to whatsapp logic ended 
+
+    // posting form data to email logic started
+    
+    let emailBody = "<b>CUSTOMER DETAILS</b>" + "<br>" + "<br>" + 
+    "<b>Name: </b>" + customerName.value + "<br>" +
+    "<b>Email: </b>" + customerEmail.value + "<br>" +
+    "<b>WhatsApp: </b>" + customerWhatsapp.value + "<br>" +
+    "<b>Shipping Address: </b>" + customerAddress.value + "<br>" + "<br>" +
+    "<b>ORDER DETAILS</b>" + "<br>" + "<br>" +
+    "<b>Product: </b>" + productNameInput.value + "<br>" + 
+    "<b>P.Code: </b>" + productCodeInput.value +  "<br>" +
+    "<b>Size: </b>" + productSizeInput.value +  "<br>" +
+    "<b>Color: </b>" + productColorInput.value +  "<br>" +
+    "<b>Shipping Fee: </b>PKR. " + productShippingInput.value + "<br>" +
+    "<b>Current Price: </b>PKR. " + productCurrentPriceInput.value +  "<br>" +
+    "<b>Quantity: </b>" + productQuantityInput.value +  "<br>" +
+    "<b>Sub Total: </b>PKR. " + productSubTotalInput.value +  "<br>" +
+    "<b>Grand Total: </b>PKR. " + productGrandTotalInput.value + "<br>" + "<br>" +
+    "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "hafsalodhi2023@gmail.com",
+        Password : "BCCA4002AE7D73B6C5D7F346A6C87B6CA404",
+        To : 'lodhiumar2023@gmail.com',
+        From : "hafsalodhi2023@gmail.com",
+        Subject : 'ORDER RECEIPT',
+        Body : emailBody
+    })
+    
+    // posting form data to email logic ended
+
+})
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 })
 
 // orderButton logic started

@@ -84,7 +84,7 @@
               <span class="xl">Extra Large</span>
             </div>
             <div class="product-color small-font-size display">
-              <option value="Violet" class="color1">Violet</option>
+              <option value="Violet" class="color1" selected >Violet</option>
               <option value="Pink" class="color1">Pink</option>
               <option value="Brown" class="color1">Brown</option>
               <option value="Black" class="color1">Black</option>
@@ -130,7 +130,7 @@
               <span class="xl">Extra Large</span>
             </div>
             <div class="product-color small-font-size display ">
-              <option value="Blue" class="color1">Blue</option>
+              <option value="Blue" class="color1" selected >Blue</option>
               <option value="Yellow" class="color1">Yellow</option>
               <option value="Mehroon" class="color1">Mehroon</option>
               <option value="Camel" class="color1">Camel</option>
@@ -242,32 +242,33 @@
           <h1>ORDER FORM</h1>
         </div>
       </div>
-      <form class="form-main-div">
+      <form id="form" action="" class="form-main-div">
         <div class="form-left-div">
           <h4>CUSTOMER DETAILS</h4>
           <div class="form">
             <label for="">CUSTOMER NAME :</label>
             <input
               type="text"
-              id=""
+              id="customer-name"
               name=""
               placeholder="CUSTOMER NAME..."
               required
             />
 
             <label for="">EMAIL :</label>
-            <input type="email" id="" name="" placeholder="Email..." required />
+            <input type="email" id="customer-email" name="" placeholder="Email..." required />
             <label for="">WHATSAPP NUMBER :</label>
             <input
               type="tel"
-              id=""
+              id="customer-whatsapp"
               name=""
               placeholder="+923330000000"
-              max="13"
+              maxlength="13"
+              minlength="13"
               required
             />
             <label for="">SHIPPING ADDRESS :</label>
-            <textarea name="" id="" cols="30" rows="2" required></textarea>
+            <textarea name="" id="customer-address" cols="30" rows="2" required></textarea>
           </div>
         </div>
 
@@ -303,7 +304,7 @@
             <input type="text" id="product-grand-total" name="" readonly />
             <div class="button-div">
               <button class="cancel-button">CANCEL</button>
-              <button>CONFIRM ORDER</button>
+              <button class="confirm-order-btn">CONFIRM ORDER</button>
             </div>
           </div>
         </div>
@@ -311,5 +312,6 @@
     </section>
     <!--` order section end-->
   </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="index.js"></script>
 </html>
