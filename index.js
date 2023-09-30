@@ -151,7 +151,7 @@ confirmOrderBtn.addEventListener('click', function(e){
     
     // posting form data to whatsapp logic started
    
-    let url = "https://wa.me/923350020256?text=" +
+    let url = "https://wa.me/923350020257?text=" +
    "*ROYAL THREAD*" + '%0a'+ "%0a" + 
    "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
    "*Name:* " + customerName.value + "%0a" +
