@@ -1,6 +1,6 @@
 // Targeting All The Elements Started
 let shippingFee = 200;
-const orderNumber = Math.floor(Math.random() * 1000000);
+const orderNumber = Math.floor(Math.random() * (1000000 - 100000) + 100000);
 const form = document.querySelector("#form");
 const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
@@ -106,13 +106,12 @@ const productSubTotalInput = document.getElementById("product-sub-total");
 const productGrandTotalInput = document.getElementById("product-grand-total");
 const customerName = document.getElementById("customer-name");
 const customerEmail = document.getElementById("customer-email");
-const customerWhatsapp = document.getElementById("customer-whatsapp");
 const customerAddress = document.getElementById("customer-address");
 const confirmOrderBtn = document.getElementsByClassName("confirm-order-btn")[0];
 const orderNumberInput = document.getElementById("order-number");
+const customerWhatsapp = document.getElementById("customer-whatsapp");
 
 // targeting order form elements
-
 
 orderButton.addEventListener('click', function(){
     
@@ -161,7 +160,7 @@ form.addEventListener('submit', function(e){
    "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
    "*Name:* " + customerName.value + "%0a" +
    "*Email:* " + customerEmail.value + "%0a" +
-   "*WhatsApp:* " + customerWhatsapp.value + "%0a" +
+   "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
    "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
    "*ORDER DETAILS*" + "%0a" + "%0a" +
    "*Order Number:* "+ orderNumberInput.value + "%0a" +
@@ -185,7 +184,8 @@ form.addEventListener('submit', function(e){
     let emailBody = "<b>CUSTOMER DETAILS</b>" + "<br>" + "<br>" + 
     "<b>Name: </b>" + customerName.value + "<br>" +
     "<b>Email: </b>" + customerEmail.value + "<br>" +
-    "<b>WhatsApp: </b>" + customerWhatsapp.value + "<br>" +
+    "<b>WhatsApp: </b>" + 
+    ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) + "<br>" +
     "<b>Shipping Address: </b>" + customerAddress.value + "<br>" + "<br>" +
     "<b>ORDER DETAILS</b>" + "<br>" + "<br>" +
     "<b>Order Number: </b>"+ orderNumberInput.value  + "<br>" +
