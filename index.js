@@ -1,5 +1,6 @@
 // Targeting All The Elements Started
 let shippingFee = 200;
+const orderNumber = Math.floor(Math.random() * 1000000);
 const form = document.querySelector("#form");
 const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
@@ -108,6 +109,7 @@ const customerEmail = document.getElementById("customer-email");
 const customerWhatsapp = document.getElementById("customer-whatsapp");
 const customerAddress = document.getElementById("customer-address");
 const confirmOrderBtn = document.getElementsByClassName("confirm-order-btn")[0];
+const orderNumberInput = document.getElementById("order-number");
 
 // targeting order form elements
 
@@ -121,6 +123,7 @@ orderButton.addEventListener('click', function(){
     productSizeInput.value = productDetailsSize.value;
     productColorInput.value = productDetailsSelectedColor.value;
     productShippingInput.value = shippingFee;
+    orderNumberInput.value = "WC-" + orderNumber;
 
     productCurrentPriceInput.value = parseInt(productDetailsCurrentPrice.textContent);
      
@@ -147,8 +150,10 @@ orderButton.addEventListener('click', function(){
 })
 
 
-confirmOrderBtn.addEventListener('click', function(e){
+form.addEventListener('submit', function(e){
     
+    e.preventDefault();
+
     // posting form data to whatsapp logic started
    
     let url = "https://wa.me/923350020257?text=" +
@@ -160,7 +165,8 @@ confirmOrderBtn.addEventListener('click', function(e){
    "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
    "*ORDER DETAILS*" + "%0a" + "%0a" +
    "*Product:* " + productNameInput.value + "%0a" + 
-   "*P.Code:* " + productCodeInput.value +  "%0a" +
+   "*Product Code:* " + productCodeInput.value +  "%0a" + 
+   "*Order Number:* "+ orderNumberInput.value + "%0a" +
    "*Size:* " + productSizeInput.value +  "%0a" +
    "*Color:* " + productColorInput.value +  "%0a" +
    "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
@@ -183,7 +189,8 @@ confirmOrderBtn.addEventListener('click', function(e){
     "<b>Shipping Address: </b>" + customerAddress.value + "<br>" + "<br>" +
     "<b>ORDER DETAILS</b>" + "<br>" + "<br>" +
     "<b>Product: </b>" + productNameInput.value + "<br>" + 
-    "<b>P.Code: </b>" + productCodeInput.value +  "<br>" +
+    "<b>Product Code: </b>" + productCodeInput.value +  "<br>" +
+    "<b>Order Number: </b>"+ orderNumberInput.value  + "<br>" +
     "<b>Size: </b>" + productSizeInput.value +  "<br>" +
     "<b>Color: </b>" + productColorInput.value +  "<br>" +
     "<b>Shipping Fee: </b>PKR. " + productShippingInput.value + "<br>" +
@@ -200,17 +207,10 @@ confirmOrderBtn.addEventListener('click', function(e){
         To : customerEmail.value,
         From : "hafsalodhi2023@gmail.com",
         Subject : 'ORDER RECEIPT',
-        Body : emailBody
+        Body : emailBody,
     })
-    
     // posting form data to email logic ended
-
 })
-
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-})
-
 // orderButton logic started
 
 // Product Details Logic Ended
