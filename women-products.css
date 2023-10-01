@@ -383,14 +383,13 @@ nav ul li a:hover::after {
 
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .right-div .button-div button {
   /* border: 1px solid #000; */
   width: 160px;
   height: 40px;
-  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -431,7 +430,7 @@ nav ul li a:hover::after {
 .order-heading {
   /* border: 1px solid #000; */
   width: 100%;
-  height: 16%;
+  height: 10%;
 
   display: flex;
   align-items: center;
@@ -449,12 +448,12 @@ nav ul li a:hover::after {
 
 .order-heading-left-div img {
   /* border: 1px solid #000; */
-  width: 60px;
+  width: 37px;
   margin-left: 30px;
 }
 
 .order-heading-left-div h1 {
-  font-size: 30px;
+  font-size: 25spx;
   font-weight: 500;
   margin-left: 10px;
 }
@@ -470,14 +469,14 @@ nav ul li a:hover::after {
 }
 
 .order-heading-right-div h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 400;
 }
 
 .form-main-div {
   /* border: 1px solid #000; */
   width: 100%;
-  height: 84%;
+  height: 90%;
 
   display: flex;
   align-items: center;
@@ -497,8 +496,7 @@ nav ul li a:hover::after {
 
 .form-left-div h4 {
   /* border: 1px solid #000; */
-  margin: 20px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   color: var(--heading);
 }
@@ -539,7 +537,7 @@ textarea {
 }
 
 .form-right-div h4 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   color: var(--heading);
 }
@@ -572,11 +570,11 @@ textarea {
 .form-right-div .form .button-div {
   /* border: 1px solid #f00; */
   width: 100%;
-  height: 48px;
+  height: 60px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .form-right-div .form .button-div button {
@@ -626,7 +624,7 @@ textarea {
   animation-iteration-count: 1;
 }
 
-.fade-in2{
+.fade-in2 {
   animation-name: fade-in2;
   animation-duration: 2s;
   animation-direction: alternate;
@@ -634,33 +632,28 @@ textarea {
 }
 
 @keyframes fade-in {
-  0%{
+  0% {
     opacity: 0;
     height: 0;
     width: 0;
     margin-left: 50%;
     margin-top: 50%;
   }
-  
-  100%{
+
+  100% {
     opacity: 1;
     height: 100%;
     width: 100%;
   }
-  
 }
 @keyframes fade-in2 {
-  from{
+  from {
     opacity: 0;
   }
-  
-  to{
+
+  to {
     opacity: 1;
   }
-  
 }
-
-
-
 
 /*` order section end */
