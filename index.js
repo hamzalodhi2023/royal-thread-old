@@ -164,9 +164,9 @@ form.addEventListener('submit', function(e){
    "*WhatsApp:* " + customerWhatsapp.value + "%0a" +
    "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
    "*ORDER DETAILS*" + "%0a" + "%0a" +
+   "*Order Number:* "+ orderNumberInput.value + "%0a" +
    "*Product:* " + productNameInput.value + "%0a" + 
    "*Product Code:* " + productCodeInput.value +  "%0a" + 
-   "*Order Number:* "+ orderNumberInput.value + "%0a" +
    "*Size:* " + productSizeInput.value +  "%0a" +
    "*Color:* " + productColorInput.value +  "%0a" +
    "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
@@ -188,9 +188,9 @@ form.addEventListener('submit', function(e){
     "<b>WhatsApp: </b>" + customerWhatsapp.value + "<br>" +
     "<b>Shipping Address: </b>" + customerAddress.value + "<br>" + "<br>" +
     "<b>ORDER DETAILS</b>" + "<br>" + "<br>" +
+    "<b>Order Number: </b>"+ orderNumberInput.value  + "<br>" +
     "<b>Product: </b>" + productNameInput.value + "<br>" + 
     "<b>Product Code: </b>" + productCodeInput.value +  "<br>" +
-    "<b>Order Number: </b>"+ orderNumberInput.value  + "<br>" +
     "<b>Size: </b>" + productSizeInput.value +  "<br>" +
     "<b>Color: </b>" + productColorInput.value +  "<br>" +
     "<b>Shipping Fee: </b>PKR. " + productShippingInput.value + "<br>" +
