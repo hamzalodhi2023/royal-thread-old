@@ -209,6 +209,8 @@ form.addEventListener('submit', function(e){
         Subject : 'ORDER RECEIPT',
         Body : emailBody,
     })
+
+    window.location.reload();
     // posting form data to email logic ended
 })
 // orderButton logic started
