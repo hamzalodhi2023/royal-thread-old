@@ -210,7 +210,7 @@ form.addEventListener('submit', function(e){
         Body : emailBody,
     })
 
-    window.location.reload();
+    // window.location.reload();
     // posting form data to email logic ended
 })
 // orderButton logic started
