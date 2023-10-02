@@ -203,7 +203,7 @@ form.addEventListener('submit', function(e){
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "hafsalodhi2023@gmail.com",
-        Password : "BCCA4002AE7D73B6C5D7F346A6C87B6CA404",
+        Password : "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
         To : customerEmail.value,
         From : "hafsalodhi2023@gmail.com",
         Subject : 'ORDER RECEIPT',
