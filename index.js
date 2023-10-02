@@ -153,33 +153,7 @@ form.addEventListener('submit', function(e){
     
     e.preventDefault();
 
-    // posting form data to whatsapp logic started
-   
-    let url = "https://wa.me/923350020257?text=" +
-   "*ROYAL THREAD*" + '%0a'+ "%0a" + 
-   "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
-   "*Name:* " + customerName.value + "%0a" +
-   "*Email:* " + customerEmail.value + "%0a" +
-   "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
-   "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
-   "*ORDER DETAILS*" + "%0a" + "%0a" +
-   "*Order Number:* "+ orderNumberInput.value + "%0a" +
-   "*Product:* " + productNameInput.value + "%0a" + 
-   "*Product Code:* " + productCodeInput.value +  "%0a" + 
-   "*Size:* " + productSizeInput.value +  "%0a" +
-   "*Color:* " + productColorInput.value +  "%0a" +
-   "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
-   "*Current Price:* PKR. " + productCurrentPriceInput.value +  "%0a" +
-   "*Quantity:* " + productQuantityInput.value +  "%0a" +
-   "*Sub Total:* PKR. " + productSubTotalInput.value +  "%0a" +
-   "*Grand Total:* PKR. " + productGrandTotalInput.value+ "%0a" + "%0a" +
-   "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
-   
-   window.open(url);
-   
-   // posting form data to whatsapp logic ended 
-
-    // posting form data to email logic started
+        // posting form data to email logic started
     
     let emailBody = "<b>CUSTOMER DETAILS</b>" + "<br>" + "<br>" + 
     "<b>Name: </b>" + customerName.value + "<br>" +
@@ -210,8 +184,34 @@ form.addEventListener('submit', function(e){
         Body : emailBody,
     })
 
-    // window.location.reload();
     // posting form data to email logic ended
+
+    // posting form data to whatsapp logic started
+   
+    let url = "https://wa.me/923350020257?text=" +
+   "*ROYAL THREAD*" + '%0a'+ "%0a" + 
+   "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
+   "*Name:* " + customerName.value + "%0a" +
+   "*Email:* " + customerEmail.value + "%0a" +
+   "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
+   "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
+   "*ORDER DETAILS*" + "%0a" + "%0a" +
+   "*Order Number:* "+ orderNumberInput.value + "%0a" +
+   "*Product:* " + productNameInput.value + "%0a" + 
+   "*Product Code:* " + productCodeInput.value +  "%0a" + 
+   "*Size:* " + productSizeInput.value +  "%0a" +
+   "*Color:* " + productColorInput.value +  "%0a" +
+   "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
+   "*Current Price:* PKR. " + productCurrentPriceInput.value +  "%0a" +
+   "*Quantity:* " + productQuantityInput.value +  "%0a" +
+   "*Sub Total:* PKR. " + productSubTotalInput.value +  "%0a" +
+   "*Grand Total:* PKR. " + productGrandTotalInput.value+ "%0a" + "%0a" +
+   "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
+   
+   window.open(url);
+   
+   // posting form data to whatsapp logic ended 
+
 })
 // orderButton logic started
 
