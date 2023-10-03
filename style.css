@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 :root {

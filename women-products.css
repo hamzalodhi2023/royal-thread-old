@@ -38,7 +38,6 @@ a {
 }
 
 /*? navbar start */
-
 nav {
   background-color: var(--background);
   /* border: 1px solid #000; */
@@ -117,7 +116,6 @@ nav ul li a:hover::after {
   left: 0;
 }
 /*` navbar end */
-
 /*? section 1 start*/
 
 #products {
