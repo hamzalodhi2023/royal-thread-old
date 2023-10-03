@@ -354,7 +354,7 @@ nav ul li a:hover::after {
 }
 
 .collection-left-div .image1 {
-  background-image: url(images/watch.jpg);
+  background-image: url(images/watch.webp);
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
@@ -386,7 +386,7 @@ nav ul li a:hover::after {
 
 .collection-left-div .image2 {
   /* border: 1px solid #000; */
-  background-image: url(images/bag.jpg);
+  background-image: url(images/bag.webp);
   background-position: center;
   background-size: cover;
   height: 50%;
@@ -419,7 +419,7 @@ nav ul li a:hover::after {
   height: 100%;
 }
 .sub-collection {
-  background-image: url(images/beauty.jpg);
+  background-image: url(images/beauty.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -453,7 +453,7 @@ nav ul li a:hover::after {
 /*? subscription section start */
 
 #subscription {
-  background-image: url(images/subscribe\ background.png);
+  background-image: url(images/subscribe-background.webp);
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
