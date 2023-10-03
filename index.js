@@ -212,6 +212,11 @@ form.addEventListener('submit', function(e){
    
    // posting form data to whatsapp logic ended 
 
+
+   setInterval(function(){
+    window.location.reload();
+   },3000)
+
 })
 // orderButton logic started
 
