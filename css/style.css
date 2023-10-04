@@ -245,12 +245,17 @@ nav ul li a:hover::after {
 }
 
 .arrivals-card-div {
-  /* border: 1px solid #000; */
   width: 230px;
   height: 431px;
   margin: 30px 50px 30px 50px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.arrivals-card-div:hover {
+  box-shadow: 1px 1px 20px rgb(136, 136, 136);
 }
 
 .arrivals-card-div::after {
@@ -340,7 +345,7 @@ nav ul li a:hover::after {
 }
 
 .collection-left-div .image1 {
-  background-image: url(images/watch.png);
+  background-image: url(../images/watch.png);
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
@@ -372,7 +377,7 @@ nav ul li a:hover::after {
 
 .collection-left-div .image2 {
   /* border: 1px solid #000; */
-  background-image: url(images/bag.webp);
+  background-image: url(../images/bag.webp);
   background-position: center;
   background-size: cover;
   height: 50%;
@@ -406,7 +411,7 @@ nav ul li a:hover::after {
 }
 
 .sub-collection {
-  background-image: url(images/beauty.webp);
+  background-image: url(../images/beauty.webp);
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -441,7 +446,7 @@ nav ul li a:hover::after {
 /*? subscription section start */
 
 #subscription {
-  background-image: url(images/subscribe-background.webp);
+  background-image: url(../images/subscribe-background.webp);
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
@@ -534,11 +539,12 @@ form div button:hover {
   color: white;
 }
 /*` subscription section end */
+
 /*? footer section start */
 
 #footer {
   /* border: 1px solid #000; */
-  /* background-color: var(--background); */
+  background-color: var(--background);
   height: 35vh;
   width: 100%;
 
@@ -639,6 +645,7 @@ form div button:hover {
 
 #copy {
   /* border: 1px solid #000; */
+  background-color: var(--background);
   height: 25vh;
   width: 100%;
   padding: 20px;

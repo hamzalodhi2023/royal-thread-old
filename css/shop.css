@@ -161,7 +161,7 @@ i:hover {
 
 #women-dresses-collection a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/Women\ Dresses\ Collection.webp);
+  background-image: url(../shop-img/Women\ Dresses\ Collection.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -198,7 +198,7 @@ i:hover {
 
 #bags-and-accessories a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/Bags\ &\ Accessories.webp);
+  background-image: url(../shop-img/Bags\ &\ Accessories.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -236,7 +236,7 @@ i:hover {
 
 #men-dresses-collection a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/men-dresses-collection.webp);
+  background-image: url(../shop-img/men-dresses-collection.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -274,7 +274,7 @@ i:hover {
 
 #jewelry a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/Jewelry.webp);
+  background-image: url(../shop-img/Jewelry.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -313,7 +313,7 @@ i:hover {
 
 #beauty-and-fragrances a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/Beauty\ &\ Fragrances.webp);
+  background-image: url(../shop-img/Beauty\ &\ Fragrances.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -352,7 +352,7 @@ i:hover {
 
 #watches a {
   /* border: 1px solid #000; */
-  background-image: url(shop-img/Watches.webp);
+  background-image: url(../shop-img/Watches.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
