@@ -22,6 +22,31 @@ a {
   color: black;
 }
 
+.fa-house {
+  /* border: 1px solid #000; */
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  z-index: 9999;
+
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.541);
+  background-color: #f11a7b44;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-house:hover {
+  transform: scale(1.1);
+}
+
 /*? header section start */
 #header {
   /* border: 1px solid #000; */
