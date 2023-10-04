@@ -49,7 +49,7 @@
 .line {
   width: 34px;
   height: 3px;
-  background-color: var(--primary);
+  background-color: white;
   transition: all 0.8s;
 }
 
@@ -112,7 +112,6 @@
 }
 
 /* hamburger menu ended */
-
 
 h1 {
   color: var(--heading);
