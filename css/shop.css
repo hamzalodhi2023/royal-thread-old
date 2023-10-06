@@ -175,9 +175,8 @@ i:hover {
 #women-dresses-collection a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 550px;
   color: #ffffff;
-  font-size: 5rem;
+  font-size: 6vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-right: 6%;
@@ -213,9 +212,9 @@ i:hover {
 #bags-and-accessories a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 700px;
+  /* width: 700px; */
   color: #ffffff;
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -251,9 +250,8 @@ i:hover {
 #men-dresses-collection a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 700px;
   color: #ffffff;
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -289,9 +287,8 @@ i:hover {
 #jewelry a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 700px;
   color: #ffffff;
-  font-size: 8rem;
+  font-size: 7vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -328,9 +325,9 @@ i:hover {
 #beauty-and-fragrances a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 550px;
+  /* width: 550px; */
   color: #ffffff;
-  font-size: 5rem;
+  font-size: 6vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -367,9 +364,8 @@ i:hover {
 #watches a h1 {
   background-color: #00000057;
   /* border: 1px solid #000; */
-  width: 650px;
   color: #ffffff;
-  font-size: 8rem;
+  font-size: 7vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
