@@ -122,31 +122,6 @@ a {
   color: black;
 }
 
-i {
-  /* border: 1px solid #000; */
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  bottom: 4%;
-  right: 4%;
-
-  border-radius: 50%;
-  font-size: 1.5rem;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.541);
-  background-color: rgba(255, 255, 255, 0.226);
-  padding-top: 1.2%;
-  transition: 0.6s;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-i:hover {
-  transform: scale(1.1);
-}
-
 /*? women-dresses-collection started */
 #women-dresses-collection {
   /* border: 1px solid #000; */
@@ -162,7 +137,8 @@ i:hover {
 #women-dresses-collection a {
   /* border: 1px solid #000; */
   background-image: url(../shop-img/Women\ Dresses\ Collection.webp);
-  background-position: center;
+  background-position: 50%;
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -176,10 +152,10 @@ i:hover {
   background-color: #00000057;
   /* border: 1px solid #000; */
   color: #ffffff;
-  font-size: 6vw;
+  font-size: 7vw;
   font-weight: 500;
   padding: 10px 50px;
-  margin-right: 6%;
+  margin-right: 3%;
   text-align: left;
 }
 /*` women-dresses-collection ended */
@@ -236,7 +212,7 @@ i:hover {
 #men-dresses-collection a {
   /* border: 1px solid #000; */
   background-image: url(../shop-img/men-dresses-collection.webp);
-  background-position: center;
+  background-position: 100%;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -251,7 +227,7 @@ i:hover {
   background-color: #00000057;
   /* border: 1px solid #000; */
   color: #ffffff;
-  font-size: 6vw;
+  font-size: 7vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -273,7 +249,7 @@ i:hover {
 #jewelry a {
   /* border: 1px solid #000; */
   background-image: url(../shop-img/Jewelry.webp);
-  background-position: center;
+  background-position: 60%;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -288,7 +264,7 @@ i:hover {
   background-color: #00000057;
   /* border: 1px solid #000; */
   color: #ffffff;
-  font-size: 7vw;
+  font-size: 10vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
@@ -350,7 +326,7 @@ i:hover {
 #watches a {
   /* border: 1px solid #000; */
   background-image: url(../shop-img/Watches.webp);
-  background-position: center;
+  background-position: 80%;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -365,11 +341,11 @@ i:hover {
   background-color: #00000057;
   /* border: 1px solid #000; */
   color: #ffffff;
-  font-size: 7vw;
+  font-size: 10vw;
   font-weight: 500;
   padding: 10px 50px;
   margin-left: 6%;
-  margin-top: -10%;
+  margin-top: 50vh;
   text-align: left;
 }
 /*` Watches ended */
