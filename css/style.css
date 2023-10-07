@@ -484,7 +484,7 @@ nav ul li a:hover::after {
   background-position: center;
   background-size: cover;
   /* border: 1px solid #000; */
-  height: 85vh;
+  height: 100vh;
   width: 100%;
 
   display: flex;
@@ -626,7 +626,7 @@ form div button:hover {
   height: 100%;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -634,7 +634,7 @@ form div button:hover {
 .footer-right-div ul {
   /* border: 1px solid #000; */
   width: 250px;
-  height: 80%;
+  height: 100%;
   list-style: none;
   padding-left: 50px;
   margin-top: 1.5%;

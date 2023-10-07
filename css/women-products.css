@@ -132,6 +132,8 @@ nav ul li a:hover::after {
   font-weight: 500;
   width: 100%;
   text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
 }
 
 #products .card-main-div {
@@ -669,7 +671,7 @@ textarea {
   height: 100%;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -677,7 +679,7 @@ textarea {
 .footer-right-div ul {
   /* border: 1px solid #000; */
   width: 250px;
-  height: 80%;
+  height: 100%;
   list-style: none;
   padding-left: 50px;
   margin-top: 1.5%;
