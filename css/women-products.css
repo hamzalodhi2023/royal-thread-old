@@ -440,7 +440,7 @@ nav ul li a:hover::after {
 .form-main-div {
   /* border: 1px solid #000; */
   width: 100%;
-  height: 90%;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -449,7 +449,7 @@ nav ul li a:hover::after {
 
 .form-left-div {
   /* border: 1px solid #000; */
-  width: 50%;
+  width: 700px;
   height: 100%;
 
   display: flex;
@@ -468,7 +468,7 @@ nav ul li a:hover::after {
 .form-left-div .form {
   /* border: 1px solid #000; */
   width: 80%;
-  height: 80%;
+  height: 90%;
 }
 
 input[type="text"],
@@ -491,7 +491,7 @@ textarea {
 
 .form-right-div {
   /* border: 1px solid #000; */
-  width: 50%;
+  width: 600px;
   height: 100%;
 
   display: flex;
@@ -1056,7 +1056,7 @@ textarea {
 
 /*? media query for order start */
 /*?tab */
-@media only screen and (max-width: 1366px) and (min-width: 320px) {
+@media only screen and (max-width: 1132px) and (min-width: 320px) {
   #order {
     /* border: 1px solid #000; */
     height: 100%;
