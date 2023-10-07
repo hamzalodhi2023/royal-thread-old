@@ -893,7 +893,7 @@ textarea {
 }
 
 /*? media query for product-description start */
-@media only screen and (max-width: 1132px) and (min-width: 400px) {
+@media only screen and (max-width: 1132px) and (min-width: 414px) {
   #product-description .left-div {
     /* border: 1px solid #000; */
     height: 100vh;
@@ -963,6 +963,102 @@ textarea {
   #product-description .right-div h2 {
     /* border: 1px solid #000; */
     margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 413px) and (min-width: 360px) {
+  #product-description .left-div {
+    /* border: 1px solid #000; */
+    height: 70vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .left-div-logo-div {
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .images-main-div {
+    /* border: 1px solid #f00; */
+    width: 100%;
+    height: 82%;
+  }
+
+  .images-main-div h2 {
+    /* border: 1px solid #000; */
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .main-image {
+    /* border: 1px solid #000; */
+    height: 100%;
+    width: 75%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .select-images {
+    /* border: 1px solid #000; */
+    width: 20%;
+    height: 87%;
+  }
+
+  #product-description .right-div {
+    /* border: 1px solid #000; */
+    height: 40vh;
+    width: 100%;
+    padding: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  #product-description .right-div h2 {
+    /* border: 1px solid #000; */
+    margin-top: 0px;
+  }
+
+  #product-description .right-div p {
+    /* border: 1px solid #000; */
+    width: 90%;
+    height: 40px;
+    font-weight: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .right-div .button-div {
+    /* border: 1px solid #000; */
+    width: 95%;
+    height: 100px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 }
 /*` media query for product-description end */
