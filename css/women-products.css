@@ -936,22 +936,33 @@ textarea {
   .main-image {
     /* border: 1px solid #000; */
     height: 100%;
-    width: 35%;
+    width: 80%;
 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
+  .select-images {
+    /* border: 1px solid #000; */
+    width: 20%;
+    height: 80%;
+  }
+
   #product-description .right-div {
     /* border: 1px solid #000; */
-    height: 100vh;
+    height: 50vh;
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+  }
+
+  #product-description .right-div h2 {
+    /* border: 1px solid #000; */
+    margin-top: 0px;
   }
 }
 /*` media query for product-description end */
