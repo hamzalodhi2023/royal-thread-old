@@ -19,7 +19,7 @@
 .navbar {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.849);
+  background-color: rgba(0, 0, 0, 0.911);
   position: fixed;
   top: 0;
   right: -100vw;
@@ -75,13 +75,14 @@
 }
 
 .nav-link {
+  /* border: 1px solid #f00; */
   text-decoration: none;
-  font-size: 35px;
+  font-size: 5vw;
   color: #eee;
   font-weight: 300;
   letter-spacing: 2px;
   position: relative;
-  padding: 3px 0;
+  padding: 10px 0;
 }
 
 .nav-link::before,
