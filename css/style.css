@@ -489,7 +489,7 @@ nav ul li a:hover::after {
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 }
 
