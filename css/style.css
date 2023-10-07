@@ -746,8 +746,24 @@ form div button:hover {
     display: none;
   }
 
+  #footer .lgo-description {
+    /* border: 1px solid #000; */
+    height: 170px;
+    width: 100%;
+  }
+
+  #footer .lgo-description img {
+    width: 8vw;
+  }
+
+  #footer .lgo-description p {
+    font-size: 2.2vw;
+  }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 601px) {
   #subscription {
-    height: 50vh;
+    height: 70vh;
     width: 100%;
   }
 
@@ -785,5 +801,53 @@ form div button:hover {
 
   #footer .lgo-description p {
     font-size: 2.2vw;
+  }
+
+  #footer .lgo-description p {
+    font-size: 2.2vw;
+  }
+}
+
+@media only screen and (max-width: 414px) and (min-width: 360px) {
+  #subscription {
+    height: 70vh;
+    width: 100%;
+  }
+
+  .form-box {
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    position: relative;
+    width: 90vw;
+    height: 350px;
+    background-color: rgb(131, 18, 109);
+    background-image: linear-gradient(
+      0deg,
+      rgb(211, 46, 100),
+      rgb(131, 18, 109)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+  }
+
+  .form-box .form-value {
+    /* border: 1px solid #000; */
+    width: 80%;
+  }
+
+  #footer .lgo-description {
+    /* border: 1px solid #000; */
+    height: 170px;
+    width: 100%;
+  }
+
+  #footer .lgo-description img {
+    width: 20vw;
+  }
+
+  #footer .lgo-description p {
+    font-size: 3vw;
   }
 }
