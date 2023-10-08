@@ -293,7 +293,7 @@ nav ul li a:hover::after {
 
 .text-div .product-name {
   color: var(--heading);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #products .card-main-div .card-div .text-div .product-code {
