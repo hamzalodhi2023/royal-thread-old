@@ -238,81 +238,35 @@ const madeTypeDropDownSelectedValue = document.querySelector("#made-type");
 const categoryDropDownSelectedValue = document.querySelector("#category");
 
 const applyBtn = document.querySelector("#applyBtn");
+const clearBtn = document.querySelector("#clearBtn");
 
-for(let product = 0; product < ProductCollectionCards.length; product++){
-
-    let productName = ProductCollectionCards[product].querySelector(".product-name");     
-    
-        applyBtn.addEventListener("click", () => {
-
-            if(madeTypeDropDownSelectedValue.value === 'ALL'){
-
-                ProductCollectionCards[product].style.display = "block";
-
-            }else{
-
-            if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
-
-                ProductCollectionCards[product].style.display = "";
-            
-            }else{
-                
-                ProductCollectionCards[product].style.display = "none";
-            }
-        }
-        
-
-            if(stuffDropDownSelectedValue.value === 'ALL'){
-                
-                ProductCollectionCards[product].style.display = "block";
-
-                if(madeTypeDropDownSelectedValue.value === 'ALL'){
-
-                    ProductCollectionCards[product].style.display = "block";
-    
-                }else{
-    
-                if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
-    
-                    ProductCollectionCards[product].style.display = "";
-                
-                }else{
-                    
-                    ProductCollectionCards[product].style.display = "none";
-                }
-            }
-            
-            }else{
-
-            if(productName.textContent.indexOf(stuffDropDownSelectedValue.value) > -1){
-
-                ProductCollectionCards[product].style.display = "";
-
-                if(madeTypeDropDownSelectedValue.value === 'ALL'){
-
-                    ProductCollectionCards[product].style.display = "block";
-    
-                }else{
-    
-                if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
-    
-                    ProductCollectionCards[product].style.display = "";
-                
-                }else{
-                    
-                    ProductCollectionCards[product].style.display = "none";
-                }
-            }
-            
-            }else{
-                
-                ProductCollectionCards[product].style.display = "none";
-            }
-        }
-
-     })
-
+clearBtn.onclick = () => {
+    window.location.reload();
 }
+
+applyBtn.addEventListener("click", () => {
+  for (let product = 0; product < ProductCollectionCards.length; product++) {
+    let productName = ProductCollectionCards[product].querySelector(".product-name");
+    let shouldDisplay = true;
+
+    if (categoryDropDownSelectedValue.value !== 'ALL' &&
+        productName.textContent.indexOf(categoryDropDownSelectedValue.value) === -1) {
+      shouldDisplay = false;
+    }
+
+    if (madeTypeDropDownSelectedValue.value !== 'ALL' &&
+        productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) === -1) {
+      shouldDisplay = false;
+    }
+
+    if (stuffDropDownSelectedValue.value !== 'ALL' &&
+        productName.textContent.indexOf(stuffDropDownSelectedValue.value) === -1) {
+      shouldDisplay = false;
+    }
+
+    ProductCollectionCards[product].style.display = shouldDisplay ? "block" : "none";
+  }
+});
 
 
 
