@@ -442,6 +442,7 @@ nav ul li a:hover::after {
 
 .select-images .image {
   /* border: 1px solid #000; */
+  cursor: pointer;
   width: 50%;
   height: 100px;
 }

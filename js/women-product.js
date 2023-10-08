@@ -2,6 +2,9 @@
 let shippingFee = 200;
 const orderNumber = Math.floor(Math.random() * (1000000 - 100000) + 100000);
 const form = document.querySelector("#form");
+const copyRight = document.querySelector("#copy");
+const filterDiv = document.querySelector("#filter");
+const footer = document.querySelector("#footer");
 const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
 const nav = document.querySelector("nav");
@@ -55,6 +58,11 @@ ProductCollectionCards.forEach(currentCard => {
             ProductDetailsDiv.style.display = "flex";
             nav.style.display = 'none';
             productSection.style.display = "none";
+            footer.style.display = "none";
+            copyRight.style.display = "none";
+            filterDiv.style.display = "none";
+            window.scrollBy(0,-10000000000000000000000);
+
             productDetailsMainImg.src = currentCardMainImg.src;
 
             const currentCardSmallImages = currentCard.querySelectorAll(".product-photos img");
@@ -143,7 +151,9 @@ orderButton.addEventListener('click', function(){
     
     orderSection.style.display = "block";
     ProductDetailsDiv.style.display = 'none';
+    window.scrollBy(0,-10000000000000000000000);
     orderSection.classList.toggle("fade-in");
+    filterDiv.style.display = "none";
     // form data logic ended
     
 })
@@ -219,5 +229,91 @@ form.addEventListener('submit', function(e){
 
 })
 // orderButton logic started
-
 // Product Details Logic Ended
+
+// filter logic started
+
+const stuffDropDownSelectedValue = document.querySelector("#stuff-div");
+const madeTypeDropDownSelectedValue = document.querySelector("#made-type");
+const categoryDropDownSelectedValue = document.querySelector("#category");
+
+const applyBtn = document.querySelector("#applyBtn");
+
+for(let product = 0; product < ProductCollectionCards.length; product++){
+
+    let productName = ProductCollectionCards[product].querySelector(".product-name");     
+    
+        applyBtn.addEventListener("click", () => {
+
+            if(madeTypeDropDownSelectedValue.value === 'ALL'){
+
+                ProductCollectionCards[product].style.display = "block";
+
+            }else{
+
+            if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
+
+                ProductCollectionCards[product].style.display = "";
+            
+            }else{
+                
+                ProductCollectionCards[product].style.display = "none";
+            }
+        }
+        
+
+            if(stuffDropDownSelectedValue.value === 'ALL'){
+                
+                ProductCollectionCards[product].style.display = "block";
+
+                if(madeTypeDropDownSelectedValue.value === 'ALL'){
+
+                    ProductCollectionCards[product].style.display = "block";
+    
+                }else{
+    
+                if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
+    
+                    ProductCollectionCards[product].style.display = "";
+                
+                }else{
+                    
+                    ProductCollectionCards[product].style.display = "none";
+                }
+            }
+            
+            }else{
+
+            if(productName.textContent.indexOf(stuffDropDownSelectedValue.value) > -1){
+
+                ProductCollectionCards[product].style.display = "";
+
+                if(madeTypeDropDownSelectedValue.value === 'ALL'){
+
+                    ProductCollectionCards[product].style.display = "block";
+    
+                }else{
+    
+                if(productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) > -1){
+    
+                    ProductCollectionCards[product].style.display = "";
+                
+                }else{
+                    
+                    ProductCollectionCards[product].style.display = "none";
+                }
+            }
+            
+            }else{
+                
+                ProductCollectionCards[product].style.display = "none";
+            }
+        }
+
+     })
+
+}
+
+
+
+// filter logic ended
