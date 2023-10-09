@@ -541,18 +541,26 @@ nav ul li a:hover::after {
 /*` section product-description end */
 
 /*? order section start */
-#submitting{
+
+#submitting {
   /* border: 1px solid #000; */
   width: 100%;
   height: 100vh;
   text-align: center;
-  font-size: 40px;
-  color:var(--heading) ;
+  font-size: 4vw;
+  color: var(--heading);
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+#submitting img {
+  /* border: 1px solid #000; */
+  width: 10%;
+  margin-top: 1.5%;
+}
+
 #order {
   /* border: 1px solid #000; */
   height: 100vh;

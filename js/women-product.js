@@ -10,7 +10,7 @@ const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
 const nav = document.querySelector("nav");
 const productSection = document.querySelector("#products");
-const productDetailsMainImg = document.querySelector('.main-image img');
+const productDetailsMainImg = document.querySelector(".main-image img");
 const productDetailsSmallImages = document.querySelectorAll(".image img");
 const productDetailsProductName = document.querySelector(".right-div h2");
 const productDetailsProductCode = document.querySelector(".skuNumber");
@@ -26,77 +26,84 @@ const productDetailsSize = document.querySelector("#size");
 const productDetailsSelectedColor = document.querySelector(".selected-color");
 // Targeting All The Elements Ended
 
-
-
-
 // Product Details Logic Started
-ProductCollectionCards.forEach(currentCard => {
-    currentCard.addEventListener('click', () => {
-        const currentCardMainImg = currentCard.querySelector(".image-div img");
-        const currentCardProductName = currentCard.querySelector(".product-name");
-        const currentCardProductCode = currentCard.querySelector(".product-code"); 
-        const currentCardProductPrice = currentCard.querySelector(".product-price");
-        const currentCardProductDiscount = currentCard.querySelector(".product-discount");  
-        const currentCardColors = currentCard.querySelectorAll(".product-color option");
+ProductCollectionCards.forEach((currentCard) => {
+  currentCard.addEventListener("click", () => {
+    const currentCardMainImg = currentCard.querySelector(".image-div img");
+    const currentCardProductName = currentCard.querySelector(".product-name");
+    const currentCardProductCode = currentCard.querySelector(".product-code");
+    const currentCardProductPrice = currentCard.querySelector(".product-price");
+    const currentCardProductDiscount =
+      currentCard.querySelector(".product-discount");
+    const currentCardColors = currentCard.querySelectorAll(
+      ".product-color option"
+    );
 
-        productDetailsProductName.textContent = currentCardProductName.textContent;
-        productDetailsProductCode.textContent = currentCardProductCode.textContent;
-        productDetailsProductPrice.textContent = currentCardProductPrice.textContent;
-        productDetailsProductDiscount.textContent  = currentCardProductDiscount.textContent;
+    productDetailsProductName.textContent = currentCardProductName.textContent;
+    productDetailsProductCode.textContent = currentCardProductCode.textContent;
+    productDetailsProductPrice.textContent =
+      currentCardProductPrice.textContent;
+    productDetailsProductDiscount.textContent =
+      currentCardProductDiscount.textContent;
 
-        productDetailsCurrentPrice.textContent =  parseInt(productDetailsProductPrice.textContent)- parseInt(productDetailsProductPrice.textContent/100) * parseInt(productDetailsProductDiscount.textContent);
+    productDetailsCurrentPrice.textContent =
+      parseInt(productDetailsProductPrice.textContent) -
+      parseInt(productDetailsProductPrice.textContent / 100) *
+        parseInt(productDetailsProductDiscount.textContent);
 
-        ProductDetailsDiv.classList.toggle("fade-in2");
+    ProductDetailsDiv.classList.toggle("fade-in2");
 
-        let color = 0
-        while(color < 4){
-            productDetailsColors[color].textContent = currentCardColors[color].textContent;
-            productDetailsColors[color].value = currentCardColors[color].value;
-            color++;
-        }
+    let color = 0;
+    while (color < 4) {
+      productDetailsColors[color].textContent =
+        currentCardColors[color].textContent;
+      productDetailsColors[color].value = currentCardColors[color].value;
+      color++;
+    }
 
-        if (currentCardMainImg) {
-            ProductDetailsDiv.style.display = "flex";
-            nav.style.display = 'none';
-            productSection.style.display = "none";
-            footer.style.display = "none";
-            copyRight.style.display = "none";
-            filterDiv.style.display = "none";
-            window.scrollBy(0,-10000000000000000000000);
+    if (currentCardMainImg) {
+      ProductDetailsDiv.style.display = "flex";
+      nav.style.display = "none";
+      productSection.style.display = "none";
+      footer.style.display = "none";
+      copyRight.style.display = "none";
+      filterDiv.style.display = "none";
+      window.scrollBy(0, -10000000000000000000000);
 
-            productDetailsMainImg.src = currentCardMainImg.src;
+      productDetailsMainImg.src = currentCardMainImg.src;
 
-            const currentCardSmallImages = currentCard.querySelectorAll(".product-photos img");
+      const currentCardSmallImages = currentCard.querySelectorAll(
+        ".product-photos img"
+      );
 
-            let i = 0;
-            while (i < 5 && currentCardSmallImages[i]) {
-                productDetailsSmallImages[i].src = currentCardSmallImages[i].src;
-                i++;
-            }            
-        }
-    });
+      let i = 0;
+      while (i < 5 && currentCardSmallImages[i]) {
+        productDetailsSmallImages[i].src = currentCardSmallImages[i].src;
+        i++;
+      }
+    }
+  });
 });
 
 // backButton and cancelButton logic started
 
-backButton.addEventListener("click", function(){
-    open("women-products.html", "_parent");
-})
+backButton.addEventListener("click", function () {
+  open("women-products.html", "_parent");
+});
 
-cancelButton.addEventListener("click", function(){
-    open("women-products.html", "_parent");
-
-})
+cancelButton.addEventListener("click", function () {
+  open("women-products.html", "_parent");
+});
 
 // backButton and cancelButton logic ended
 
 // product details small images logic started
 
-productDetailsSmallImages.forEach(function(curImg){
-        curImg.onclick = function() {
-            productDetailsMainImg.src = curImg.src;
-        }
-})
+productDetailsSmallImages.forEach(function (curImg) {
+  curImg.onclick = function () {
+    productDetailsMainImg.src = curImg.src;
+  };
+});
 
 // product details small images logic ended
 
@@ -122,143 +129,210 @@ const customerWhatsapp = document.getElementById("customer-whatsapp");
 
 // targeting order form elements
 
-orderButton.addEventListener('click', function(){
-    
-    // form data logic started
+orderButton.addEventListener("click", function () {
+  // form data logic started
 
-    productNameInput.value = productDetailsProductName.textContent;
-    productCodeInput.value = productDetailsProductCode.textContent;
-    productSizeInput.value = productDetailsSize.value;
-    productColorInput.value = productDetailsSelectedColor.value;
-    productShippingInput.value = shippingFee;
-    orderNumberInput.value = "WC-" + orderNumber;
+  productNameInput.value = productDetailsProductName.textContent;
+  productCodeInput.value = productDetailsProductCode.textContent;
+  productSizeInput.value = productDetailsSize.value;
+  productColorInput.value = productDetailsSelectedColor.value;
+  productShippingInput.value = shippingFee;
+  orderNumberInput.value = "WC-" + orderNumber;
 
-    productCurrentPriceInput.value = parseInt(productDetailsCurrentPrice.textContent);
-     
-    let TotalPrice = parseFloat(productCurrentPriceInput.value)* parseFloat(productQuantityInput.value);
+  productCurrentPriceInput.value = parseInt(
+    productDetailsCurrentPrice.textContent
+  );
+
+  let TotalPrice =
+    parseFloat(productCurrentPriceInput.value) *
+    parseFloat(productQuantityInput.value);
+  productSubTotalInput.value = TotalPrice;
+
+  let grandTotal = TotalPrice + shippingFee;
+  productGrandTotalInput.value = grandTotal;
+
+  productQuantityInput.addEventListener("click", function () {
+    let TotalPrice =
+      parseFloat(productCurrentPriceInput.value) *
+      parseFloat(productQuantityInput.value);
     productSubTotalInput.value = TotalPrice;
-    
+
     let grandTotal = TotalPrice + shippingFee;
     productGrandTotalInput.value = grandTotal;
+  });
 
-    productQuantityInput.addEventListener('click', function(){
-    
-    let TotalPrice = parseFloat(productCurrentPriceInput.value)* parseFloat(productQuantityInput.value)
-    productSubTotalInput.value = TotalPrice;
+  orderSection.style.display = "block";
+  ProductDetailsDiv.style.display = "none";
+  window.scrollBy(0, -10000000000000000000000);
+  orderSection.classList.toggle("fade-in");
+  filterDiv.style.display = "none";
+  // form data logic ended
+});
 
-    let grandTotal = TotalPrice + shippingFee;
-    productGrandTotalInput.value = grandTotal;
-})
-    
-    orderSection.style.display = "block";
-    ProductDetailsDiv.style.display = 'none';
-    window.scrollBy(0,-10000000000000000000000);
-    orderSection.classList.toggle("fade-in");
-    filterDiv.style.display = "none";
-    // form data logic ended
-    
-})
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  // order form logic started
 
+  let deploymentID =
+    "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
 
+  let d = new FormData(form);
 
-form.addEventListener('submit', function(e){
-    
-    e.preventDefault();
-    // order form logic started
-    
-    let deploymentID = "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
-    
-    let d = new FormData(form);
-    
-    fetch(deploymentID, {
-        method: 'POST',
-        body: d,
+  fetch(deploymentID, {
+    method: "POST",
+    body: d,
+  })
+    .then((response) => {
+      return response.text();
     })
-    .then((response) => { 
-        return response.text();
-    })
-    .then(finalRes => {
-        console.log(finalRes);
+    .then((finalRes) => {
+      console.log(finalRes);
     });
 
-    form.style.display = "none";
-    orderSection.style.backgroundColor = "#f7f7f7";
-    submitDiv.style.display = "flex";
-    
-    // order form logic ended
-    
-    // posting form data to email logic started
-  
-    setInterval(() => {
-    let emailBody = "<b>CUSTOMER DETAILS</b>" + "<br>" + "<br>" + 
-    "<b>Name: </b>" + customerName.value + "<br>" +
-    "<b>Email: </b>" + customerEmail.value + "<br>" +
-    "<b>WhatsApp: </b>" + 
-    ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) + "<br>" +
-    "<b>Shipping Address: </b>" + customerAddress.value + "<br>" + "<br>" +
-    "<b>ORDER DETAILS</b>" + "<br>" + "<br>" +
-    "<b>Order Number: </b>"+ orderNumberInput.value  + "<br>" +
-    "<b>Product: </b>" + productNameInput.value + "<br>" + 
-    "<b>Product Code: </b>" + productCodeInput.value +  "<br>" +
-    "<b>Size: </b>" + productSizeInput.value +  "<br>" +
-    "<b>Color: </b>" + productColorInput.value +  "<br>" +
-    "<b>Shipping Fee: </b>PKR. " + productShippingInput.value + "<br>" +
-    "<b>Current Price: </b>PKR. " + productCurrentPriceInput.value +  "<br>" +
-    "<b>Quantity: </b>" + productQuantityInput.value +  "<br>" +
-    "<b>Sub Total: </b>PKR. " + productSubTotalInput.value +  "<br>" +
-    "<b>Grand Total: </b>PKR. " + productGrandTotalInput.value + "<br>" + "<br>" +
-    "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
+  form.style.display = "none";
+  orderSection.style.backgroundColor = "#f7f7f7";
+  submitDiv.style.display = "flex";
+
+  // order form logic ended
+
+  // posting form data to email logic started
+
+  setInterval(() => {
+    let emailBody =
+      "<b>CUSTOMER DETAILS</b>" +
+      "<br>" +
+      "<br>" +
+      "<b>Name: </b>" +
+      customerName.value +
+      "<br>" +
+      "<b>Email: </b>" +
+      customerEmail.value +
+      "<br>" +
+      "<b>WhatsApp: </b>" +
+      ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +
+      "<br>" +
+      "<b>Shipping Address: </b>" +
+      customerAddress.value +
+      "<br>" +
+      "<br>" +
+      "<b>ORDER DETAILS</b>" +
+      "<br>" +
+      "<br>" +
+      "<b>Order Number: </b>" +
+      orderNumberInput.value +
+      "<br>" +
+      "<b>Product: </b>" +
+      productNameInput.value +
+      "<br>" +
+      "<b>Product Code: </b>" +
+      productCodeInput.value +
+      "<br>" +
+      "<b>Size: </b>" +
+      productSizeInput.value +
+      "<br>" +
+      "<b>Color: </b>" +
+      productColorInput.value +
+      "<br>" +
+      "<b>Shipping Fee: </b>PKR. " +
+      productShippingInput.value +
+      "<br>" +
+      "<b>Current Price: </b>PKR. " +
+      productCurrentPriceInput.value +
+      "<br>" +
+      "<b>Quantity: </b>" +
+      productQuantityInput.value +
+      "<br>" +
+      "<b>Sub Total: </b>PKR. " +
+      productSubTotalInput.value +
+      "<br>" +
+      "<b>Grand Total: </b>PKR. " +
+      productGrandTotalInput.value +
+      "<br>" +
+      "<br>" +
+      "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
 
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "hafsalodhi2023@gmail.com",
-        Password : "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
-        To : customerEmail.value,
-        From : "hafsalodhi2023@gmail.com",
-        Subject : 'ORDER RECEIPT',
-        Body : emailBody,
-    })
+      Host: "smtp.elasticemail.com",
+      Username: "hafsalodhi2023@gmail.com",
+      Password: "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
+      To: customerEmail.value,
+      From: "hafsalodhi2023@gmail.com",
+      Subject: "ORDER RECEIPT",
+      Body: emailBody,
+    });
+  }, 1000);
 
-  }, 1000);  
-    
-    // posting form data to email logic ended
+  // posting form data to email logic ended
 
-    // posting form data to whatsapp logic started
-   setInterval(() => {
-    
-    let url = "https://wa.me/923350020257?text=" +
-    "*ROYAL THREAD*" + '%0a'+ "%0a" + 
-    "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
-    "*Name:* " + customerName.value + "%0a" +
-    "*Email:* " + customerEmail.value + "%0a" +
-    "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
-    "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
-    "*ORDER DETAILS*" + "%0a" + "%0a" +
-    "*Order Number:* "+ orderNumberInput.value + "%0a" +
-   "*Product:* " + productNameInput.value + "%0a" + 
-   "*Product Code:* " + productCodeInput.value +  "%0a" + 
-   "*Size:* " + productSizeInput.value +  "%0a" +
-   "*Color:* " + productColorInput.value +  "%0a" +
-   "*Shipping Fee:* PKR. " + productShippingInput.value + "%0a" +
-   "*Current Price:* PKR. " + productCurrentPriceInput.value +  "%0a" +
-   "*Quantity:* " + productQuantityInput.value +  "%0a" +
-   "*Sub Total:* PKR. " + productSubTotalInput.value +  "%0a" +
-   "*Grand Total:* PKR. " + productGrandTotalInput.value+ "%0a" + "%0a" +
-   "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
-   
-   window.open(url);
+  // posting form data to whatsapp logic started
+  setInterval(() => {
+    let url =
+      "https://wa.me/923350020257?text=" +
+      "*ROYAL THREAD*" +
+      "%0a" +
+      "%0a" +
+      "*CUSTOMER DETAILS*" +
+      "%0a" +
+      "%0a" +
+      "*Name:* " +
+      customerName.value +
+      "%0a" +
+      "*Email:* " +
+      customerEmail.value +
+      "%0a" +
+      "*WhatsApp:* " +
+      ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +
+      "%0a" +
+      "*Shipping Address:* " +
+      customerAddress.value +
+      "%0a" +
+      "%0a" +
+      "*ORDER DETAILS*" +
+      "%0a" +
+      "%0a" +
+      "*Order Number:* " +
+      orderNumberInput.value +
+      "%0a" +
+      "*Product:* " +
+      productNameInput.value +
+      "%0a" +
+      "*Product Code:* " +
+      productCodeInput.value +
+      "%0a" +
+      "*Size:* " +
+      productSizeInput.value +
+      "%0a" +
+      "*Color:* " +
+      productColorInput.value +
+      "%0a" +
+      "*Shipping Fee:* PKR. " +
+      productShippingInput.value +
+      "%0a" +
+      "*Current Price:* PKR. " +
+      productCurrentPriceInput.value +
+      "%0a" +
+      "*Quantity:* " +
+      productQuantityInput.value +
+      "%0a" +
+      "*Sub Total:* PKR. " +
+      productSubTotalInput.value +
+      "%0a" +
+      "*Grand Total:* PKR. " +
+      productGrandTotalInput.value +
+      "%0a" +
+      "%0a" +
+      "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
 
-   }, 2000);
-    
-   
-//    posting form data to whatsapp logic ended 
-   
-   setInterval(function(){
-       form.innerHTML = "";
-       window.location.reload();
-    },3000)
-    
-})
+    window.open(url);
+  }, 2000);
+
+  //    posting form data to whatsapp logic ended
+
+  setInterval(function () {
+    form.innerHTML = "";
+    window.location.reload();
+  }, 3000);
+});
 
 // orderButton logic started
 
@@ -274,32 +348,42 @@ const applyBtn = document.querySelector("#applyBtn");
 const clearBtn = document.querySelector("#clearBtn");
 
 clearBtn.onclick = () => {
-    window.location.reload();
-}
+  window.location.reload();
+};
 
 applyBtn.addEventListener("click", () => {
   for (let product = 0; product < ProductCollectionCards.length; product++) {
-    let productName = ProductCollectionCards[product].querySelector(".product-name");
+    let productName =
+      ProductCollectionCards[product].querySelector(".product-name");
     let shouldDisplay = true;
 
-    if (categoryDropDownSelectedValue.value !== 'ALL' &&
-        productName.textContent.indexOf(categoryDropDownSelectedValue.value) === -1) {
+    if (
+      categoryDropDownSelectedValue.value !== "ALL" &&
+      productName.textContent.indexOf(categoryDropDownSelectedValue.value) ===
+        -1
+    ) {
       shouldDisplay = false;
     }
 
-    if (madeTypeDropDownSelectedValue.value !== 'ALL' &&
-        productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) === -1) {
+    if (
+      madeTypeDropDownSelectedValue.value !== "ALL" &&
+      productName.textContent.indexOf(madeTypeDropDownSelectedValue.value) ===
+        -1
+    ) {
       shouldDisplay = false;
     }
 
-    if (stuffDropDownSelectedValue.value !== 'ALL' &&
-        productName.textContent.indexOf(stuffDropDownSelectedValue.value) === -1) {
+    if (
+      stuffDropDownSelectedValue.value !== "ALL" &&
+      productName.textContent.indexOf(stuffDropDownSelectedValue.value) === -1
+    ) {
       shouldDisplay = false;
     }
 
-    ProductCollectionCards[product].style.display = shouldDisplay ? "block" : "none";
+    ProductCollectionCards[product].style.display = shouldDisplay
+      ? "block"
+      : "none";
   }
 });
 
 // filter logic ended
-
