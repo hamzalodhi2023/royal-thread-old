@@ -1,9 +1,10 @@
 // Targeting All The Elements Started
 let shippingFee = 200;
 const orderNumber = Math.floor(Math.random() * (1000000 - 100000) + 100000);
-const form = document.querySelector("#form");
+const form = document.querySelector("form");
 const copyRight = document.querySelector("#copy");
 const filterDiv = document.querySelector("#filter");
+const submitDiv = document.querySelector("#submitting");
 const footer = document.querySelector("#footer");
 const ProductCollectionCards = document.querySelectorAll(".card-div");
 const ProductDetailsDiv = document.querySelector("#product-description");
@@ -159,12 +160,36 @@ orderButton.addEventListener('click', function(){
 })
 
 
+
 form.addEventListener('submit', function(e){
     
     e.preventDefault();
-
-        // posting form data to email logic started
+    // order form logic started
     
+    let deploymentID = "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
+    
+    let d = new FormData(form);
+    
+    fetch(deploymentID, {
+        method: 'POST',
+        body: d,
+    })
+    .then((response) => { 
+        return response.text();
+    })
+    .then(finalRes => {
+        console.log(finalRes);
+    });
+
+    form.style.display = "none";
+    orderSection.style.backgroundColor = "#f7f7f7";
+    submitDiv.style.display = "flex";
+    
+    // order form logic ended
+    
+    // posting form data to email logic started
+  
+    setInterval(() => {
     let emailBody = "<b>CUSTOMER DETAILS</b>" + "<br>" + "<br>" + 
     "<b>Name: </b>" + customerName.value + "<br>" +
     "<b>Email: </b>" + customerEmail.value + "<br>" +
@@ -194,19 +219,22 @@ form.addEventListener('submit', function(e){
         Body : emailBody,
     })
 
+  }, 1000);  
+    
     // posting form data to email logic ended
 
     // posting form data to whatsapp logic started
-   
+   setInterval(() => {
+    
     let url = "https://wa.me/923350020257?text=" +
-   "*ROYAL THREAD*" + '%0a'+ "%0a" + 
-   "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
-   "*Name:* " + customerName.value + "%0a" +
-   "*Email:* " + customerEmail.value + "%0a" +
-   "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
-   "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
-   "*ORDER DETAILS*" + "%0a" + "%0a" +
-   "*Order Number:* "+ orderNumberInput.value + "%0a" +
+    "*ROYAL THREAD*" + '%0a'+ "%0a" + 
+    "*CUSTOMER DETAILS*" + "%0a" + "%0a" + 
+    "*Name:* " + customerName.value + "%0a" +
+    "*Email:* " + customerEmail.value + "%0a" +
+    "*WhatsApp:* " + ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +"%0a" +
+    "*Shipping Address:* " + customerAddress.value + "%0a" + "%0a" +
+    "*ORDER DETAILS*" + "%0a" + "%0a" +
+    "*Order Number:* "+ orderNumberInput.value + "%0a" +
    "*Product:* " + productNameInput.value + "%0a" + 
    "*Product Code:* " + productCodeInput.value +  "%0a" + 
    "*Size:* " + productSizeInput.value +  "%0a" +
@@ -219,16 +247,21 @@ form.addEventListener('submit', function(e){
    "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
    
    window.open(url);
+
+   }, 2000);
+    
    
-   // posting form data to whatsapp logic ended 
-
-
+//    posting form data to whatsapp logic ended 
+   
    setInterval(function(){
-    window.location.reload();
-   },3000)
-
+       form.innerHTML = "";
+       window.location.reload();
+    },3000)
+    
 })
+
 // orderButton logic started
+
 // Product Details Logic Ended
 
 // filter logic started
@@ -268,6 +301,5 @@ applyBtn.addEventListener("click", () => {
   }
 });
 
-
-
 // filter logic ended
+

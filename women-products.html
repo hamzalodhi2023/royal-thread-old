@@ -797,18 +797,19 @@
     </section>
     <!--` section product-description end -->
     <!--? order section start-->
-    <section id="order" style="display: none; background-color: #ffe8f2">
-      <form id="form" action="" class="form-main-div">
+    <section id="order" style="display: none; background-color: #ffe8f2 ">
+      <div id="submitting" style="display: none;">DATA SUBMITTING<img style="padding-top: 20px;  width: 10%;" src="images/loading dots.gif" alt=""></div>
+      <form id="form" action="POST" class="form-main-div">
         <div class="form-left-div">
           <h4>CUSTOMER'S ORDER DETAILS</h4>
           <div class="form">
             <label for="">ORDER NO :</label>
-            <input type="text" id="order-number" name="" readonly />
+            <input type="text" id="order-number" name="orderNumber" readonly />
             <label for="">CUSTOMER NAME :</label>
             <input
               type="text"
               id="customer-name"
-              name=""
+              name="customerName"
               placeholder="CUSTOMER NAME..."
               required
             />
@@ -817,7 +818,7 @@
             <input
               type="EMAIL"
               id="customer-email"
-              name=""
+              name="customerEmail"
               placeholder="EMAIL..."
               required
             />
@@ -825,7 +826,7 @@
             <input
               type="text"
               id="customer-whatsapp"
-              name=""
+              name="customerWhatsapp"
               placeholder="03001234567"
               maxlength="11"
               minlength="11"
@@ -833,7 +834,7 @@
             />
             <label for="">SHIPPING ADDRESS :</label>
             <textarea
-              name=""
+              name="customerAddress"
               id="customer-address"
               cols="30"
               rows="2"
@@ -846,22 +847,22 @@
           <h4>PRODUCT DETAILS</h4>
           <div class="form">
             <label for="">PRODUCT :</label>
-            <input type="text" id="product-name" name="" readonly />
+            <input type="text" id="product-name" name="productName" readonly />
             <label for="">PRODUCT CODE :</label>
-            <input type="text" id="product-code" name="" readonly />
+            <input type="text" id="product-code" name="productCode" readonly />
             <label for="">SIZE :</label>
-            <input type="text" id="product-size" name="" readonly />
+            <input type="text" id="product-size" name="productSize" readonly />
             <label for="">COLOR :</label>
-            <input type="text" id="product-color" name="" readonly />
+            <input type="text" id="product-color" name="productColor" readonly />
             <label for="">SHIPPING FEE (PKR) :</label>
-            <input type="text" id="product-shipping" name="" readonly />
+            <input type="text" id="product-shipping" name="productShipping" readonly />
             <label for="">CURRENT PRICE (PKR) :</label>
-            <input type="text" id="current-price" name="" readonly />
+            <input type="text" id="current-price" name="productCurrentPrice" readonly />
             <label for="">QUANTITY :</label>
             <input
               type="number"
               id="product-quantity"
-              name=""
+              name="productQuantity"
               value="1"
               min="1"
               max="3"
@@ -869,9 +870,9 @@
               required
             />
             <label for="">SUB TOTAL (PKR) :</label>
-            <input type="text" id="product-sub-total" name="" readonly />
+            <input type="text" id="product-sub-total" name="productSubTotal" readonly />
             <label for="">GRAND TOTAL (PKR) :</label>
-            <input type="text" id="product-grand-total" name="" readonly />
+            <input type="text" id="product-grand-total" name="productGrandTotal" readonly />
             <div class="button-div">
               <button class="cancel-button">CANCEL</button>
               <button class="confirm-order-btn">CONFIRM ORDER</button>
