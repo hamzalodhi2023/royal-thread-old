@@ -883,6 +883,7 @@ textarea {
   margin-top: 20px;
   color: var(--heading);
   font-weight: 200;
+  text-align: center;
 }
 
 .social {

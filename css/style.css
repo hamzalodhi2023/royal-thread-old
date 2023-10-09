@@ -710,6 +710,7 @@ form div button:hover {
   margin-top: 20px;
   color: var(--heading);
   font-weight: 200;
+  text-align: center;
 }
 
 .social {
