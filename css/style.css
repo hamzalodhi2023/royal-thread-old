@@ -5,6 +5,7 @@
   font-family: "Kanit", sans-serif;
   user-select: none;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 :root {
@@ -12,6 +13,41 @@
   --primary: #f11a7b;
   --background: #fff0f5;
 }
+
+
+#cursor{
+  /* border: 1px solid #000; */
+
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  border-top: 9px solid var(--primary);
+  border-left: 9px solid var(--primary);
+  transform-origin: top;
+  transform: translate(-1px, 5px) rotate(15deg) scale(0);
+  transition: transform 0.1s;
+  z-index: 99999;
+  /* mix-blend-mode: lighten; */
+}
+
+
+#cursor::before{
+  /* border: 1px solid #000; */
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  width: 9px;
+  height: 25px;
+  background: var(--primary);
+  transform-origin: center;
+  transform: rotate(316.5deg);
+
+}
+
+body:hover #cursor{
+  transform: translate(-1px, 5px) rotate(15deg) scale(1);
+} 
 
 h1 {
   color: var(--heading);
