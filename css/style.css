@@ -14,41 +14,6 @@
   --background: #fff0f5;
 }
 
-
-#cursor{
-  /* border: 1px solid #000; */
-
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  border-top: 7px solid var(--primary);
-  border-left: 7px solid var(--primary);
-  transform-origin: top;
-  transform: translate(-1px, 5px) rotate(15deg) scale(0);
-  transition: transform 0.1s;
-  z-index: 99999;
-  /* mix-blend-mode: lighten; */
-}
-
-
-#cursor::before{
-  /* border: 1px solid #000; */
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 4px;
-  width: 7px;
-  height: 25px;
-  background: var(--primary);
-  transform-origin: center;
-  transform: rotate(316.5deg);
-
-}
-
-body:hover #cursor{
-  transform: translate(-1px, 5px) rotate(15deg) scale(1);
-} 
-
 h1 {
   color: var(--heading);
 }
