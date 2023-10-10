@@ -258,7 +258,7 @@ form.addEventListener("submit", function (e) {
     .then((finalRes) => {
       console.log(finalRes);
     });
-  }, 1000)
+  }, 3000)
     
     form.style.display = "none";
     orderSection.style.backgroundColor = "#f7f7f7";
@@ -329,14 +329,14 @@ form.addEventListener("submit", function (e) {
       "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
 
     window.open(url);
-  }, 2000);
+  }, 5000);
 
   //    posting form data to whatsapp logic ended
 
   setInterval(function () {
     form.innerHTML = "";
     window.location.reload();
-  }, 3000);
+  }, 7000);
 });
 
 // orderButton logic started
