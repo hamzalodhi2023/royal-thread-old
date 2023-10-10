@@ -336,7 +336,7 @@ form.addEventListener("submit", function (e) {
   setInterval(function () {
     form.innerHTML = "";
     window.location.reload();
-  }, 7000);
+  }, 9000);
 });
 
 // orderButton logic started
