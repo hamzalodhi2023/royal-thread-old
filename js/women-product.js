@@ -147,16 +147,16 @@ orderButton.addEventListener("click", function () {
     parseFloat(productCurrentPriceInput.value) *
     parseFloat(productQuantityInput.value);
   productSubTotalInput.value = TotalPrice;
-
+  
   let grandTotal = TotalPrice + shippingFee;
   productGrandTotalInput.value = grandTotal;
-
+  
   productQuantityInput.addEventListener("click", function () {
     let TotalPrice =
       parseFloat(productCurrentPriceInput.value) *
       parseFloat(productQuantityInput.value);
     productSubTotalInput.value = TotalPrice;
-
+    
     let grandTotal = TotalPrice + shippingFee;
     productGrandTotalInput.value = grandTotal;
   });
@@ -172,32 +172,9 @@ orderButton.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   // order form logic started
-
-  let deploymentID =
-    "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
-
-  let d = new FormData(form);
-
-  fetch(deploymentID, {
-    method: "POST",
-    body: d,
-  })
-    .then((response) => {
-      return response.text();
-    })
-    .then((finalRes) => {
-      console.log(finalRes);
-    });
-
-  form.style.display = "none";
-  orderSection.style.backgroundColor = "#f7f7f7";
-  submitDiv.style.display = "flex";
-
-  // order form logic ended
-
+  
   // posting form data to email logic started
-
-  setInterval(() => {
+  
     let emailBody =
       "<b>CUSTOMER DETAILS</b>" +
       "<br>" +
@@ -250,7 +227,7 @@ form.addEventListener("submit", function (e) {
       "<br>" +
       "<br>" +
       "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
-
+  
     Email.send({
       Host: "smtp.elasticemail.com",
       Username: "hafsalodhi2023@gmail.com",
@@ -260,9 +237,37 @@ form.addEventListener("submit", function (e) {
       Subject: "ORDER RECEIPT",
       Body: emailBody,
     });
-  }, 1000);
 
+  
   // posting form data to email logic ended
+
+  // posting form data to google sheet
+  setTimeout(function(){
+  let deploymentID =
+  "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
+
+  let d = new FormData(form);
+
+  fetch(deploymentID, {
+    method: "POST",
+    body: d,
+  })
+    .then((response) => {
+      return response.text();
+    })
+    .then((finalRes) => {
+      console.log(finalRes);
+    });
+  }, 1000)
+    
+    form.style.display = "none";
+    orderSection.style.backgroundColor = "#f7f7f7";
+    submitDiv.style.display = "flex";
+    
+  // posting form data to google sheet
+
+  // order form logic ended
+
 
   // posting form data to whatsapp logic started
   setInterval(() => {
