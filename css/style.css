@@ -5,7 +5,6 @@
   font-family: "Kanit", sans-serif;
   user-select: none;
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 :root {
@@ -284,7 +283,7 @@ nav ul li a:hover::after {
   margin: 30px 50px 30px 50px;
   position: relative;
   overflow: hidden;
-  /* cursor: pointer; */
+  cursor: pointer;
   transition: 0.6s;
 }
 
@@ -303,7 +302,6 @@ nav ul li a:hover::after {
   right: -70px;
   font-size: 20px;
   box-shadow: 0.5px 0.5px 2px rgb(143, 143, 143);
-  cursor: none;
 
   display: flex;
   align-items: center;
@@ -388,7 +386,7 @@ nav ul li a:hover::after {
   height: 50%;
   width: 100%;
   position: relative;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .collection-left-div .image1::after {
@@ -570,7 +568,7 @@ form div button {
   background-color: #fff;
   border: none;
   outline: none;
-  /* cursor: pointer; */
+  cursor: pointer;
   font-size: 1em;
   font-weight: 400;
   transition: 0.6s;
