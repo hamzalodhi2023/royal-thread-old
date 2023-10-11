@@ -173,96 +173,99 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   // order form logic started
 
-  let deploymentID =
-    "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
+  // posting form data to email logic started
 
-  let d = new FormData(form);
+  let emailBody =
+    "<b>CUSTOMER DETAILS</b>" +
+    "<br>" +
+    "<br>" +
+    "<b>Name: </b>" +
+    customerName.value +
+    "<br>" +
+    "<b>Email: </b>" +
+    customerEmail.value +
+    "<br>" +
+    "<b>WhatsApp: </b>" +
+    ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +
+    "<br>" +
+    "<b>Shipping Address: </b>" +
+    customerAddress.value +
+    "<br>" +
+    "<br>" +
+    "<b>ORDER DETAILS</b>" +
+    "<br>" +
+    "<br>" +
+    "<b>Order Number: </b>" +
+    orderNumberInput.value +
+    "<br>" +
+    "<b>Product: </b>" +
+    productNameInput.value +
+    "<br>" +
+    "<b>Product Code: </b>" +
+    productCodeInput.value +
+    "<br>" +
+    "<b>Size: </b>" +
+    productSizeInput.value +
+    "<br>" +
+    "<b>Color: </b>" +
+    productColorInput.value +
+    "<br>" +
+    "<b>Shipping Fee: </b>PKR. " +
+    productShippingInput.value +
+    "<br>" +
+    "<b>Current Price: </b>PKR. " +
+    productCurrentPriceInput.value +
+    "<br>" +
+    "<b>Quantity: </b>" +
+    productQuantityInput.value +
+    "<br>" +
+    "<b>Sub Total: </b>PKR. " +
+    productSubTotalInput.value +
+    "<br>" +
+    "<b>Grand Total: </b>PKR. " +
+    productGrandTotalInput.value +
+    "<br>" +
+    "<br>" +
+    "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
 
-  fetch(deploymentID, {
-    method: "POST",
-    body: d,
-  })
-    .then((response) => {
-      return response.text();
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "hafsalodhi2023@gmail.com",
+    Password: "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
+    To: customerEmail.value,
+    From: "hafsalodhi2023@gmail.com",
+    Subject: "ORDER RECEIPT",
+    Body: emailBody,
+  });
+
+  // posting form data to email logic ended
+
+  // posting form data to google sheet
+  setTimeout(function () {
+    let deploymentID =
+      "https://script.google.com/macros/s/AKfycbzvYlOzO2a4BmUjgJi4MhSFs6uCuRQoiWTtH-sfWCtUutgx1iVsJawg9FMNwJch2LS4_A/exec";
+
+    let d = new FormData(form);
+
+    fetch(deploymentID, {
+      method: "POST",
+      body: d,
     })
-    .then((finalRes) => {
-      console.log(finalRes);
-    });
+      .then((response) => {
+        return response.text();
+      })
+      .then((finalRes) => {
+        console.log(finalRes);
+      });
+  }, 3000);
 
   form.style.display = "none";
   orderSection.style.backgroundColor = "#f7f7f7";
   submitDiv.style.display = "flex";
 
+  // posting form data to google sheet
+
   // order form logic ended
-
-  // posting form data to email logic started
-
-  setInterval(() => {
-    let emailBody =
-      "<b>CUSTOMER DETAILS</b>" +
-      "<br>" +
-      "<br>" +
-      "<b>Name: </b>" +
-      customerName.value +
-      "<br>" +
-      "<b>Email: </b>" +
-      customerEmail.value +
-      "<br>" +
-      "<b>WhatsApp: </b>" +
-      ("92" + (customerWhatsapp.value - customerWhatsapp.value[0])) +
-      "<br>" +
-      "<b>Shipping Address: </b>" +
-      customerAddress.value +
-      "<br>" +
-      "<br>" +
-      "<b>ORDER DETAILS</b>" +
-      "<br>" +
-      "<br>" +
-      "<b>Order Number: </b>" +
-      orderNumberInput.value +
-      "<br>" +
-      "<b>Product: </b>" +
-      productNameInput.value +
-      "<br>" +
-      "<b>Product Code: </b>" +
-      productCodeInput.value +
-      "<br>" +
-      "<b>Size: </b>" +
-      productSizeInput.value +
-      "<br>" +
-      "<b>Color: </b>" +
-      productColorInput.value +
-      "<br>" +
-      "<b>Shipping Fee: </b>PKR. " +
-      productShippingInput.value +
-      "<br>" +
-      "<b>Current Price: </b>PKR. " +
-      productCurrentPriceInput.value +
-      "<br>" +
-      "<b>Quantity: </b>" +
-      productQuantityInput.value +
-      "<br>" +
-      "<b>Sub Total: </b>PKR. " +
-      productSubTotalInput.value +
-      "<br>" +
-      "<b>Grand Total: </b>PKR. " +
-      productGrandTotalInput.value +
-      "<br>" +
-      "<br>" +
-      "<b>Thank you for choosing Royal Thread, where elegance meets style.</b>";
-
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "hafsalodhi2023@gmail.com",
-      Password: "CBDA46B74169BB40DA5B3E4FDF0527EEDC5B",
-      To: customerEmail.value,
-      From: "hafsalodhi2023@gmail.com",
-      Subject: "ORDER RECEIPT",
-      Body: emailBody,
-    });
-  }, 1000);
-
-  // posting form data to email logic ended
 
   // posting form data to whatsapp logic started
   setInterval(() => {
@@ -324,14 +327,14 @@ form.addEventListener("submit", function (e) {
       "*Thank You For Choosing Royal Thread, Where Elegance Meets Style.*";
 
     window.open(url);
-  }, 2000);
+  }, 5000);
 
   //    posting form data to whatsapp logic ended
 
   setInterval(function () {
     form.innerHTML = "";
     window.location.reload();
-  }, 3000);
+  }, 9000);
 });
 
 // orderButton logic started
