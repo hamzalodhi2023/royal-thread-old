@@ -619,6 +619,50 @@ textarea {
   color: var(--heading);
 }
 
+.form-left-div .button-div {
+  /* border: 1px solid #000; */
+  width: 80%;
+  height: 15%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-left-div .button-div button:nth-child(1) {
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  transition: 0.6s;
+  outline: none;
+}
+
+.form-left-div .button-div button:nth-child(1):hover {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
+
+.form-left-div .button-div button:nth-child(2) {
+  background-color: #eb3a8a;
+  border: none;
+  color: white;
+  outline: none;
+  transition: 0.6s;
+}
+
+.form-left-div .button-div button:nth-child(2):hover {
+  background-color: var(--primary);
+  color: white;
+  outline: none;
+}
+
+.form-left-div .button-div button {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
+
 .form-right-div {
   /* border: 1px solid #000; */
   width: 600px;
